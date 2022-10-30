@@ -1,3 +1,5 @@
+project(GAZEBO-REALSENZE)
+
 cmake_minimum_required(VERSION 3.1 FATAL_ERROR)
 
 # Find Gazebo and Includes
@@ -22,7 +24,8 @@ else()
 endif()
 
 # Compiler flags
-set(CUSTOM_COMPILE_FLAGS "-g -Wall")
+set(CMAKE_CXX_STANDARD 17)
+set(CUSTOM_COMPILE_FLAGS "-g -Wall ")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GAZEBO_CXX_FLAGS} ${CUSTOM_COMPILE_FLAGS}")
 
 # Include and Link directories
